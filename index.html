@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Randy — Economics × Machine Learning</title>
+    <meta name="description" content="Economics @ PUCP | CFO @ Nonhuman | CTO @ Magnus Consulting | President @ SINAPSIA. Economics × AI.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Luis Randy — Economics × Machine Learning">
+    <meta property="og:description" content="Synergy at the frontier: decoding complex systems through economic logic and artificial intelligence.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/lrandy.jpeg">
+    <meta property="og:url" content="https://l041za.github.io">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luis Randy — Economics × Machine Learning">
+    <meta name="twitter:description" content="Synergy at the frontier: decoding complex systems through economic logic and artificial intelligence.">
+    <meta name="twitter:image" content="images/lrandy.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <div id="gradient-bg" class="gradient-bg" aria-hidden="true"></div>
+    <div id="shader-bg" class="shader-bg"></div>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-logo">LUIS RANDY</a>
+        <div class="nav-links">
+            <a href="#philosophy" class="neon-btn">Philosophy</a>
+            <a href="#about" class="neon-btn">About</a>
+            <a href="#projects" class="neon-btn">Projects</a>
+            <a href="#research" class="neon-btn">Research</a>
+            <a href="#sandbox" class="neon-btn">Market Watch</a>
+            <a href="https://linkedin.com/in/lrandyloayza" target="_blank" rel="noopener" class="neon-btn">LinkedIn</a>
+            <a href="https://github.com/L041ZA" target="_blank" rel="noopener" class="neon-btn">GitHub</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <img src="images/lrandy.jpeg" alt="Luis Randy" class="avatar-img">
+            </div>
+            <h1 class="hero-headline fade-up">
+                Economics &times; AI:<br>Decoding Complexity
+            </h1>
+            <p class="hero-sub fade-up fd2">
+                Synergy at the frontier: decoding complex systems through economic logic and artificial intelligence.<br>
+                Economics @ PUCP | CFO @ Nonhuman | CTO @ Magnus Consulting | President @ SINAPSIA
+            </p>
+            <div class="hero-cta fade-up fd3">
+                <a href="https://github.com/L041ZA" target="_blank" rel="noopener" class="neon-btn neon-btn--icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/lrandyloayza" target="_blank" rel="noopener" class="neon-btn neon-btn--icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn
+                </a>
+                <div class="cv-dropdown-wrap">
+                    <button class="neon-btn neon-btn--solid cv-download-btn" id="cv-download-btn" aria-haspopup="true" aria-expanded="false">
+                        Download CV
+                        <svg class="cv-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="cv-bubble" id="cv-bubble" role="menu">
+                        <a href="docs/CV_Luis_Randy_Loayza_ES.pdf" download="CV_Luis_Randy_Loayza_ES.pdf" class="cv-option" role="menuitem">
+                            <span class="cv-flag">🇵🇪</span>
+                            <span class="cv-option-text">
+                                <strong>Español</strong>
+                                <small>CV en español</small>
+                            </span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </a>
+                        <a href="docs/CV_Randy_Loayza_EN.pdf" download="CV_Randy_Loayza_EN.pdf" class="cv-option" role="menuitem">
+                            <span class="cv-flag">🇺🇸</span>
+                            <span class="cv-option-text">
+                                <strong>English</strong>
+                                <small>CV in English</small>
+                            </span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PHILOSOPHY — Transition Panel -->
+    <section class="section" id="philosophy">
+        <div class="wrap">
+            <span class="label fade-in">Philosophy</span>
+            <h2 class="heading fade-in">Three Pillars</h2>
+            <div class="tp-center fade-in">
+                <div class="glow-card tp-card" data-glow>
+                    <div class="glow-border"></div>
+                    <div class="tp-body">
+                        <div class="tp-viewport">
+                            <div class="tp-track" id="tp-track">
+                                <div class="tp-slide">
+                                    <span class="tp-tag">Data as Policy Language &middot; The Analyst</span>
+                                    <h3 class="tp-title">Data as a Tool for Public Decision-Making</h3>
+                                    <p class="tp-desc">Economics taught me that data is never neutral — it is an argument. I combine causal inference, econometrics, and machine learning to transform raw data into decision-making tools for public health and policy. From my work at <strong>DIGEMID (MINSA)</strong> to AI systems for radiology diagnosis, I build models that advise real decisions at scale.</p>
+                                </div>
+                                <div class="tp-slide">
+                                    <span class="tp-tag">Systems Thinking &middot; The Engineer</span>
+                                    <h3 class="tp-title">Decoding Complex Systems through Deep Learning</h3>
+                                    <p class="tp-desc">Complex systems — markets, diseases, supply chains — share one property: they are predictable if you choose the right representation. I design ML architectures (CNNs, transformers, wavelet decomposition, ensemble models) that extract signal where traditional analysis sees only noise. As <strong>CTO @ Magnus GC Consulting</strong>, I build production-grade forecasting platforms that operationalize this principle.</p>
+                                </div>
+                                <div class="tp-slide">
+                                    <span class="tp-tag">AI for Impact &middot; The Builder</span>
+                                    <h3 class="tp-title">Frontier AI at the Service of Everyone</h3>
+                                    <p class="tp-desc">I believe AI and robotics are among the most transformative forces of our time — but their benefits are not equally distributed. At <strong>Nonhuman AI Robotics Lab</strong>, I help build the frontier: embodied intelligence, autonomous robots, and reinforcement learning research in Latin America. Through <strong>SINAPSIA</strong>, the NGO I founded and lead, I work to close the technology access gap — because the power of AI must reach beyond those who already have it.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tp-nav">
+                            <div class="tp-dots" id="tp-dots">
+                                <button class="tp-dot active" data-i="0"></button>
+                                <button class="tp-dot" data-i="1"></button>
+                                <button class="tp-dot" data-i="2"></button>
+                            </div>
+                            <div class="tp-btns">
+                                <button class="tp-btn" id="tp-prev" disabled>Previous</button>
+                                <button class="tp-btn" id="tp-next">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="wrap">
+            <span class="label fade-in">The Human behind the Data</span>
+            <h2 class="heading fade-in">About Me</h2>
+            <div class="about-grid">
+                <div class="glow-card about-glow fade-in" data-glow>
+                    <div class="glow-border"></div>
+                    <div class="glow-inner">
+                        <div class="glow-text">
+                            <p class="glow-desc about-bio">
+                                As a <strong>PUCP economist</strong> and AI enthusiast, my career is defined by an uncommon duality: financial precision and technical boldness. I navigate complex systems — whether in code, in markets, or in ocean waves. I constantly seek the synergy between economic logic and human impact.
+                            </p>
+                            <div class="tags"><span>Surf</span><span>Soccer</span><span>Star Wars</span><span>Resident Evil</span><span>Demon Slayer</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-photo fade-in">
+                    <div class="tilt-card" data-tilt>
+                        <div class="tilt-spotlight"></div>
+                        <img src="images/lrandy.jpeg" alt="Luis Randy" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="wrap">
+            <span class="label fade-in">Portfolio</span>
+            <h2 class="heading fade-in">Impact Projects</h2>
+            <ul class="glow-grid">
+                <li class="glow-item glow-item--tall fade-in">
+                    <div class="glow-card" data-glow>
+                        <div class="glow-border"></div>
+                        <div class="glow-inner">
+                            <div class="glow-text">
+                                <span class="glow-label">Healthcare AI &middot; Computer Vision</span>
+                                <h3 class="glow-title">Radox</h3>
+                                <p class="glow-desc">Hybrid CNN (ResNet/VGG) + fine-tuned LLM system for pneumonia detection and automated radiology report generation. Pilot system for EsSalud's rural telemedicine network. Built on ChestX-ray14, RSNA, and Kaggle public datasets.</p>
+                                <div class="tags"><span>PyTorch</span><span>ResNet</span><span>VGG</span><span>LLM</span><span>Computer Vision</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="glow-item fade-in">
+                    <div class="glow-card" data-glow>
+                        <div class="glow-border"></div>
+                        <div class="glow-inner">
+                            <div class="glow-text">
+                                <span class="glow-label">Clinical AI &middot; INDECOPI Recognized</span>
+                                <h3 class="glow-title">MediVoz</h3>
+                                <p class="glow-desc">AI assistant for real-time transcription and structuring of clinical SOAP notes. Formally recognized by INDECOPI (Peru's IP authority) and donated to EsSalud for deployment in public health centers nationwide.</p>
+                                <div class="tags"><span>NLP</span><span>Speech-to-Text</span><span>SOAP</span><span>EsSalud</span><span>INDECOPI</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="glow-item fade-in">
+                    <div class="glow-card" data-glow>
+                        <div class="glow-border"></div>
+                        <div class="glow-inner">
+                            <div class="glow-text">
+                                <span class="glow-label">Forecasting &middot; AI Agents &middot; SaaS</span>
+                                <h3 class="glow-title">Atlas — Production Forecasting Platform</h3>
+                                <p class="glow-desc">Enterprise demand forecasting platform using wavelet decomposition + DLinear, TCN, LightGBM, XGBoost, and MLP ensembles. Includes Atlas, an AI agent (LangGraph / LangChain / Mistral Devstral) for natural-language interaction with forecast results. CTO &amp; Co-founder @ Magnus GC Consulting.</p>
+                                <div class="tags"><span>Wavelet</span><span>LightGBM</span><span>LangGraph</span><span>Mistral</span><span>Python</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="glow-item fade-in">
+                    <div class="glow-card" data-glow>
+                        <div class="glow-border"></div>
+                        <div class="glow-inner">
+                            <div class="glow-text">
+                                <span class="glow-label">Embodied AI &middot; Robotics Research</span>
+                                <h3 class="glow-title">Nonhuman AI Robotics Lab</h3>
+                                <p class="glow-desc">Co-founding member and CFO of an AI research community focused on embodied intelligence, autonomous robots, and reinforcement learning. Building the institutional and financial foundation for frontier AI research in Latin America.</p>
+                                <div class="tags"><span>Reinforcement Learning</span><span>Robotics</span><span>Embodied AI</span><span>RL</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="glow-item fade-in">
+                    <div class="glow-card" data-glow>
+                        <div class="glow-border"></div>
+                        <div class="glow-inner">
+                            <div class="glow-text">
+                                <span class="glow-label">Public Health &middot; Data Science</span>
+                                <h3 class="glow-title">DIGEMID — MINSA</h3>
+                                <p class="glow-desc">Data Science Specialist at Peru's Directorate General of Medicines. Applied machine learning and statistical analysis to support pharmaceutical regulation and national public health policy decisions.</p>
+                                <div class="tags"><span>Python</span><span>SQL</span><span>ML</span><span>MINSA</span><span>Public Policy</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- RESEARCH & WRITING -->
+    <section class="section research-section" id="research">
+        <div class="wrap">
+            <span class="label fade-in">Academic Work</span>
+            <h2 class="heading fade-in">Research &amp; Writing</h2>
+            <ul class="glow-grid glow-grid--2col">
+                <li class="glow-item fade-in">
+                    <div class="glow-card" data-glow>
+                        <div class="glow-border"></div>
+                        <div class="glow-inner">
+                            <div class="glow-text">
+                                <span class="glow-label">Econometrics &middot; Revista Economica PUCP</span>
+                                <h3 class="glow-title">Income Inequality in Latin America: A Panel Data Analysis</h3>
+                                <p class="glow-desc">Published research examining the determinants of income inequality across Latin America using panel data methods. Variables include the Gini index, GDP per capita, inflation, and education. Published in Economica, the economics student journal of PUCP.</p>
+                                <div class="tags"><span>Panel Data</span><span>Gini Index</span><span>Econometrics</span><span>Latin America</span><span>R</span></div>
+                                <a href="docs/ARTICULO_DE_ECONOMICA__Luis_Loayza.pdf" download="ARTICULO_DE_ECONOMICA__Luis_Loayza.pdf" class="paper-dl-btn">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                    Download Paper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="glow-item fade-in">
+                    <div class="glow-card" data-glow>
+                        <div class="glow-border"></div>
+                        <div class="glow-inner">
+                            <div class="glow-text">
+                                <span class="glow-label">Green Finance &middot; Premio Julio Velarde &mdash; C&aacute;mara de Comercio de Lima</span>
+                                <h3 class="glow-title">Sustainable Finance in Peru: Debt Markets and the Central Bank in the Green Transition</h3>
+                                <p class="glow-desc">Essay submitted to the Premio Julio Velarde competition (C&aacute;mara de Comercio de Lima). Measures the greenium in Peru's sovereign bond market, analyzes the BCRP's role in sustainable finance, and proposes monetary and regulatory policy instruments for the green transition.</p>
+                                <div class="tags"><span>Green Bonds</span><span>Greenium</span><span>BCRP</span><span>Monetary Policy</span><span>Sustainable Finance</span></div>
+                                <a href="docs/Ensayo_Julio_Velarde_Luis_Loayza.pdf" download="Ensayo_Julio_Velarde_Luis_Loayza.pdf" class="paper-dl-btn">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                    Download Essay
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="wrap" style="margin-top: 3.5rem;">
+            <span class="label fade-in">Exploring the Frontier</span>
+            <h2 class="heading fade-in">Research Interests</h2>
+        </div>
+        <div class="ri-marquee fade-in">
+            <div class="ri-track" id="ri-track">
+                <span class="ri-item">Deep Learning</span>
+                <span class="ri-item">Computer Vision &amp; CNNs</span>
+                <span class="ri-item">Reinforcement Learning</span>
+                <span class="ri-item">Generative AI</span>
+                <span class="ri-item">AI Agents</span>
+                <span class="ri-item">AI-Driven Robotics</span>
+                <span class="ri-item">AI in Healthcare</span>
+            </div>
+        </div>
+        <div class="ri-marquee ri-marquee--reverse fade-in">
+            <div class="ri-track ri-track--reverse" id="ri-track-2">
+                <span class="ri-item">Econometrics</span>
+                <span class="ri-item">Financial Engineering</span>
+                <span class="ri-item">Macroeconomic Analysis</span>
+                <span class="ri-item">Growth Theory</span>
+                <span class="ri-item">Time Series Forecasting</span>
+                <span class="ri-item">Optimization &amp; Graph Theory</span>
+                <span class="ri-item">Foundation Models</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKET WATCH — Bloomberg-style terminal -->
+    <section class="section terminal-section" id="sandbox">
+
+        <div class="wrap terminal-head-block fade-in">
+            <span class="label">Observatory</span>
+            <h2 class="heading">Market Watch</h2>
+            <p class="desc">
+                Hourly updates via GitHub Actions &middot; Data by Yahoo Finance &middot; Possible 15 min delay
+                <span class="terminal-timestamp" id="terminal-ts">--</span>
+            </p>
+        </div>
+
+        <!-- Ticker Tape -->
+        <div class="tape">
+            <div class="tape-track" id="tape-track"></div>
+        </div>
+
+        <div class="wrap">
+            <!-- Macro context strip -->
+            <div class="macro-strip fade-in" id="macro-strip" aria-label="Macro indicators"></div>
+
+            <!-- Search bar with dropdown -->
+            <div class="search-row fade-in">
+                <div class="search-wrap" id="search-wrap">
+                    <div class="search-glow-outer"></div>
+                    <div class="search-glow-inner"></div>
+                    <div class="search-glow-accent"></div>
+                    <div class="search-box">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle r="8" cy="11" cx="11" stroke="url(#sg1)"></circle>
+                            <line y2="16.65" y1="22" x2="16.65" x1="22" stroke="url(#sg2)"></line>
+                            <defs>
+                                <linearGradient gradientTransform="rotate(50)" id="sg1"><stop stop-color="#f8e7f8" offset="0%"></stop><stop stop-color="#b6a9b7" offset="50%"></stop></linearGradient>
+                                <linearGradient id="sg2"><stop stop-color="#b6a9b7" offset="0%"></stop><stop stop-color="#837484" offset="50%"></stop></linearGradient>
+                            </defs>
+                        </svg>
+                        <input type="text" id="ticker-search" class="search-input" placeholder="Search ticker or name…" autocomplete="off">
+                    </div>
+                    <div class="search-dropdown" id="search-dropdown"></div>
+                </div>
+            </div>
+
+            <!-- Detail View (Yahoo Finance style) -->
+            <div class="glow-card detail-glow-wrap fade-in" data-glow>
+                <div class="glow-border"></div>
+                <div class="detail" id="detail">
+                    <div class="detail-header" id="detail-header"></div>
+                    <div class="detail-compare-wrap" id="detail-compare-wrap">
+                        <div class="detail-compare-title">Compare (normalized % change)</div>
+                        <div class="detail-compare-row">
+                            <div class="cmp-search-wrap" id="cmp-wrap-a">
+                                <input type="text" class="cmp-search-input" id="compare-a" placeholder="Ticker A…" autocomplete="off" aria-label="First ticker">
+                                <div class="cmp-dropdown" id="cmp-dd-a"></div>
+                            </div>
+                            <span class="detail-compare-vs">vs</span>
+                            <div class="cmp-search-wrap" id="cmp-wrap-b">
+                                <input type="text" class="cmp-search-input" id="compare-b" placeholder="Ticker B…" autocomplete="off" aria-label="Second ticker">
+                                <div class="cmp-dropdown" id="cmp-dd-b"></div>
+                            </div>
+                            <button type="button" class="period-btn detail-compare-run" id="compare-run">Compare</button>
+                            <button type="button" class="period-btn detail-compare-clear" id="compare-clear">Clear</button>
+                        </div>
+                    </div>
+                    <div class="detail-periods" id="detail-periods">
+                        <button class="period-btn active" data-p="1d">1D</button>
+                        <button class="period-btn" data-p="5d">5D</button>
+                        <button class="period-btn" data-p="1mo">1M</button>
+                        <button class="period-btn" data-p="6mo">6M</button>
+                    </div>
+                    <div class="detail-chart" id="detail-chart">
+                        <div class="ticker-loading"><div class="dot-pulse"></div><span>Loading…</span></div>
+                    </div>
+                    <div class="detail-stats" id="detail-stats"></div>
+                </div>
+            </div>
+
+            <!-- Disclaimer + Streamlit note -->
+            <div class="terminal-footer fade-in">
+                <div class="note">
+                    <span class="note-dot"></span>
+                    Interactive Version (Streamlit / LSTMs) — Coming soon on Hugging Face Spaces
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <span class="footer-logo">LUIS RANDY</span>
+            <span class="footer-copy">&copy; 2026 &middot; Built for EEML</span>
+        </div>
+    </footer>
+
+    <script src="data/tickers_data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
